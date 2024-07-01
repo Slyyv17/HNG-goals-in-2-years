@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --pry-ff: "Roboto",
+        sans-serif;
+    --border-clr: rgb(0, 0, 0, 0.1);
+    --sec-clr: #333;
+    --link-clr: #007bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+    font-family: var(--pry-ff);
+    background-color: #f0f0f0;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    max-width: 70em;
+    border: 1px solid var(--border-clr);
+    margin: 1em auto;
+    padding: 10px;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+header ol {
+    font-size: 1.5rem;
+    padding-left: 2em;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 100%;
+    max-width: 70em;
+    height: fit-content;
+    border: 1px solid var(--border-clr);
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 1em;
+    padding: 10px;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+[data-testid="slackDisplayName"] {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: var(--sec-clr);
+}
+
+[data-testid="currentTimeUTC"],
+[data-testid="currentDay"] {
+    font-size: 1.3rem;
+    color: var(--sec-clr);
+}
+
+[data-testid="slackEmail"] {
+    font-size: 1.3rem;
+    color: var(--sec-clr);
+}
+
+[data-testid="slackProfilePicture"] {
+    max-width: 100%;
+    /* Ensure the image doesn't overflow its container */
+    height: auto;
+    /* Maintain the aspect ratio */
+    display: block;
+    /* Ensure proper spacing */
+    margin: auto;
+    /* Center the image */
+    max-height: 100%;
+    /* Limit maximum height to maintain aspect ratio */
+}
+
+[data-testid="hngLink"],
+[data-testid="keywordLink"],
+[data-testid="scrapeanywebLink"] {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--link-clr);
+    cursor: pointer;
+}
+
+b {
+    color: var(--sec-clr);
+}
